@@ -54,7 +54,7 @@
     flex-direction: column;
     flex: 1;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     max-width: 740px;
     margin: 0 auto;
     padding-bottom: 48px;
