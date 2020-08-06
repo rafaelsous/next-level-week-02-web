@@ -17,7 +17,7 @@ const Landing = () => {
 
   useEffect(() => {
     async function loadTotalConnections() {
-      await api.get('/connections').then(response => {
+      await api.get('connections').then(response => {
         const { total } = response.data;
 
         setTotalConnections(total);
