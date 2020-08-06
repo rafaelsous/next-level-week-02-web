@@ -8,10 +8,11 @@ import './styles.css';
 
 interface Props {
   title: string;
+  description?: string;
   children?: React.ReactNode;
 }
 
-const PageHeader = ({ title, children }: Props) => {
+const PageHeader = ({ title, description, children }: Props) => {
   return (
     <header className="page-header">
       <div className="top-bar-container">
@@ -24,6 +25,8 @@ const PageHeader = ({ title, children }: Props) => {
 
       <div className="header-content">
         <strong>{title}</strong>
+
+        { description && <p>{description}</p> }
 
         {children}
       </div>
