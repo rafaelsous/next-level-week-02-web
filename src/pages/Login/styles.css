@@ -1,0 +1,31 @@
+#page-login {
+  width: 100vw;
+  height: 100vh;
+}
+
+#page-login-content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#page-login-content .page-login-header {
+  width: 50%;
+  height: 100vh;
+  padding: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+}
+
+#page-login-content .page-login-header img {
+}
+
+#page-login-content .page-login-form {
+  width: 50%;
+  height: 100vh;
+}

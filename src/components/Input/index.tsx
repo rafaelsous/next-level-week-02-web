@@ -1,19 +1,25 @@
-import React, { InputHTMLAttributes } from 'react';
+import React, { InputHTMLAttributes, ReactNode } from 'react';
 
 import './styles.css';
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
-  label: string;
+  label?: string;
+  icon?: ReactNode;
+  type: string;
 }
 
-const Input = ({ name, label, ...rest }: Props) => {
+const Input = ({ name, label, icon, type, ...rest }: Props) => {
   return (
     <div className="input-block">
-      <label htmlFor={name}>{label}</label>
-      <input id={name} type="text" {...rest} />
+      { label && <label htmlFor={name}>{label}</label> }
+      <input id={name} {...{ type }} {...rest} />
     </div>
   );
+}
+
+Input.defaultProps = {
+  type: "text",
 }
 
 export default Input;
