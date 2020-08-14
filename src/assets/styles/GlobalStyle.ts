@@ -1,4 +1,7 @@
-:root {
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  :root {
   --color-background: #F0F0F7;
   --color-primary-lighter: #9871F5;
   --color-primary-light: #916BEA;
@@ -56,3 +59,6 @@ body, input, button, textarea {
     font-size: 62.5%;
   }
 }
+`;
+
+export default GlobalStyle;
